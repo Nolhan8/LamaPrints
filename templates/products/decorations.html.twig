@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenue sur LamaPrints - Figurines</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+</head>
+<body>
+{% include 'includes/header.html.twig' %}
+<!-- Big Title -->
+<section class="hero-image bg-dark text-white">
+    <div class="container text-center d-flex justify-content-between align-items-center">
+        <!-- Bouton de navigation vers la gauche -->
+        <a href="{{ path('app_toys') }}" class="text-white me-3">
+            <i class="bi bi-chevron-left chevron"></i>
+        </a>
+        <div class="hero-text">
+            <h2 class="lobster-regular mb-3">Décorations</h2>
+            <p class="mb-4">Décorez votre monde avec style.</p>
+        </div>
+        <!-- Bouton de navigation vers la droite -->
+        <a href="{{ path('app_figurines') }}" class="text-white me-3">
+            <i class="bi bi-chevron-right chevron"></i>
+        </a>
+    </div>
+</section>
+
+
+    <!-- Interface pour afficher les produits de type figurine -->
+    <section class="container mt-5">
+        <!-- Boutons de filtre et de tri -->
+        <div class="row mb-3">
+            <!-- Bouton de filtre par catégorie -->
+            <div class="col-md-3">
+                <select class="form-select" aria-label="Filtrer par catégorie">
+                    <option selected>Filtrer par catégorie</option>
+                    <option value="1">Catégorie 1</option>
+                    <option value="2">Catégorie 2</option>
+                    <option value="3">Catégorie 3</option>
+                </select>
+            </div>
+            <!-- Bouton de tri par prix -->
+            <div class="col-md-3">
+                <select class="form-select" aria-label="Trier par prix">
+                    <option selected>Trier par prix</option>
+                    <option value="asc">Prix croissant</option>
+                    <option value="desc">Prix décroissant</option>
+                </select>
+            </div>
+        </div>
+        <!-- Liste des produits -->
+        
+        <!-- Pagination -->
+        <div class="row mt-3">
+            <div class="col-md-12 text-center">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Précédent</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Suivant</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </section>
+{% include 'includes/footer.html.twig' %}
+    <!-- JavaScript -->
+    <script src="{{ asset('js/scripts.js') }}"></script>
+</body>
+</html>

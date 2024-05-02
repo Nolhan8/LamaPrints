@@ -30,16 +30,36 @@ body {
     background-color: #6943D4;
 }
 
+/* Style pour les liens actifs dans la navigation */
+.active {
+    background-color: #6943D4;
+}
+.active-icon i{
+    color: #6943D4;
+}
+
 .hero-image {
     background-image: url('../images/frog.jpg');
     background-size: cover;
     background-position: center;
     padding: 100px 0;
+    display: flex; /* Utilisation de flexbox pour le centrage vertical */
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    position: relative; /* Position relative pour le conteneur du bigTitle */
 }
 
+.link {
+    color:#A46FD9;
+}
 /* Styles spécifiques au header */
 .header h1 {
     font-size: 28px;
+}
+
+.header h1 a {
+    color:white;
+    text-decoration:none;
 }
 
 .header .custom-icon {
@@ -55,6 +75,27 @@ body {
 .hero-image p {
     font-size: 18px;
     margin-bottom: 30px;
+}
+
+.hero-text {
+    text-align: center; /* Centrer le texte horizontalement */
+}
+
+/* Styles pour les chevrons */
+.bi-chevron-left {
+    font-size: 75px; /* Taille normale des chevrons */
+    position: absolute; /* Position absolue par rapport au conteneur parent */
+    top: 50%; /* Positionner le haut du chevron à 50% de la hauteur du conteneur parent */
+    left: 10px; /* Positionner le chevron gauche avec un léger décalage à gauche */
+    transform: translateY(-50%); /* Déplacer le chevron vers le haut de moitié de sa propre hauteur */
+}
+
+.bi-chevron-right {
+    font-size: 75px; /* Taille normale des chevrons */
+    position: absolute; /* Position absolue par rapport au conteneur parent */
+    top: 50%; /* Positionner le haut du chevron à 50% de la hauteur du conteneur parent */
+    right: 10px; /* Positionner le chevron droit avec un léger décalage à droite */
+    transform: translateY(-50%); /* Déplacer le chevron vers le haut de moitié de sa propre hauteur */
 }
 
 /* Styles spécifiques aux cards */
@@ -129,4 +170,17 @@ body {
 /* Affichage du menu déroulant lorsqu'il est ouvert */
 .show {
     display: block;
+}
+
+/*styles spécifiques à l'affichage sur de plus petits écran*/
+@media (max-width: 768px) {
+    .hero-image {
+        height: 200px;
+    }
+}
+@media (max-width: 768px) {
+    .bi-chevron-left,
+    .bi-chevron-right {
+        font-size: 50px; /* Taille réduite des chevrons pour les petits écrans */
+    }
 }

@@ -10,64 +10,15 @@
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header bg-purple text-white lobster-regular">
-        <div class="container d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center">
-                <i class="bi bi-list me-3 d-lg-none custom-icon" id="menu-toggle"></i> <!-- Icone de liste pour le menu déroulant en version mobile -->
-                <i class="bi bi-gift me-2 custom-icon"></i> <!-- Icone de cadeau -->
-                <h1 class="mb-0 me-3">LamaPrints</h1>
-            </div>
-            <nav>
-                <div class="d-lg-flex align-items-center">
-                    <ul class="nav d-none d-lg-flex">
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="figurines.html">Figurines</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="jeux-cadeaux.html">Jeux/Cadeaux</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="decorations.html">Décorations</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="impression-a-la-demande.html">Impression à la demande</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            <div class="d-flex align-items-center">
-                <a href="#" class="text-white me-3"><i class="bi bi-person-fill custom-icon"></i></a> <!-- Icone de profil -->
-                <a href="#" class="text-white"><i class="bi bi-basket2-fill custom-icon"></i></a> <!-- Icone de panier -->
-            </div>
-        </div>
-    </header>
-    <!-- Menu déroulant en version mobile -->
-    <div class="d-lg-none">
-        <div class="dropdown-menu" id="menu-content"> <!-- Modifiez la classe ici -->
-            <ul class="nav">
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="figurines.html">Figurines</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="jeux-cadeaux.html">Jeux/Cadeaux</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="decorations.html">Décorations</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="impression-a-la-demande.html">Impression à la demande</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-
+{% include 'includes/header.html.twig' %}
     <!-- Big Title -->
     <section class="hero-image bg-dark text-white">
         <div class="container text-center">
-            <h2 class="lobster-regular mb-3">Trouvez le cadeau parfait pour chaque occasion</h2>
-            <p class="mb-4">Parcourez notre sélection d'impressions faites à la main</p>
-            <a href="#" class="btn btn-dark btn-purple">Voir les produits</a>
+            <div class="hero-text">
+                <h2 class="lobster-regular mb-3">Trouvez le cadeau parfait pour chaque occasion</h2>
+                <p class="mb-4 d-none d-md-block">Parcourez notre sélection d'impressions faites à la main</p>
+                <a href="#" class="btn btn-dark btn-purple">Voir les produits</a>
+            </div>
         </div>
     </section>
 
@@ -76,7 +27,7 @@
         <h3 class="text-center mb-4">Nouveautés</h3>
         <div class="row">
             <!-- Card 1 -->
-            <div class="col-md-4 mb-4">
+            <div class="col-lg-4 col-md-6 mb-4">
                 <div class="card">
                     <img src="images/products/king-skeleton/king-skeleton-1.jpg" class="card-img-top" alt="Product 1">
                     <div class="card-body">
@@ -87,7 +38,7 @@
                 </div>
             </div>
             <!-- Card 2 -->
-            <div class="col-md-4 mb-4">
+            <div class="col-lg-4 col-md-6 mb-4">
                 <div class="card">
                     <img src="images/products/sharkasaurus/sharkasaurus-1.jpg" class="card-img-top" alt="Product 2">
                     <div class="card-body">
@@ -98,7 +49,7 @@
                 </div>
             </div>
             <!-- Card 3 -->
-            <div class="col-md-4 mb-4">
+            <div class="col-lg-4 col-md-6 mb-4">
                 <div class="card">
                     <img src="images/products/dungeon-props/dungeon-props.jpg" class="card-img-top" alt="Product 3">
                     <div class="card-body">
@@ -111,51 +62,7 @@
         </div>
     </section>
 
-    <footer class="footer bg-purple text-white lobster-regular">
-        <div class="container footer-content">
-            <div class="row mb-5vc  ">
-                <div class="col-md-6 d-flex align-items-center justify-content-center footer-top">
-                    <i class="bi bi-shield-lock-fill me-2"></i>
-                    <span>Achats et données sécurisés</span>
-                </div>
-                <div class="col-md-6 d-flex align-items-center justify-content-center footer-top">
-                    <i class="bi bi-truck me-2"></i>
-                    <span>Expédié sous 5 jours</span>
-                </div>
-            </div>
-            <div class="row mt-3">
-                <div class="col-md-3 justify-content-center">
-                    <h5 class="mb-3">Liens Utiles</h5>
-                    <div class="dropdown-menu">
-                        vvv
-                    </div>
-                </div>
-                <div class="col-md-3 justify-content-center">
-                    <h5 class="mb-3">Mentions Légales</h5>
-                    <div class="dropdown-menu">
-                        <!-- Insérez vos liens ici -->
-                    </div>
-                </div>
-                <div class="col-md-3 justify-content-center">
-                    <h5 class="mb-3">Informations</h5>
-                    <div class="dropdown-menu">
-                        <!-- Insérez vos liens ici -->
-                    </div>
-                </div>
-                <div class="col-md-3 justify-content-center">
-                    <h5 class="mb-3">Votre Compte</h5>
-                    <div class="dropdown-menu">
-                        <!-- Insérez vos liens ici -->
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-3">
-                <div class="col-md-12 text-center">
-                    <p>Merci pour votre confiance <i class="bi bi-heart-fill"></i></p>
-                </div>
-            </div>
-        </div>
-    </footer>
+{% include 'includes/footer.html.twig' %}
 
     <!-- JavaScript -->
     <script src="{{ asset('js/scripts.js') }}"></script>

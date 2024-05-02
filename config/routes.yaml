@@ -7,3 +7,43 @@ controllers:
 home:
     path: /
     controller: App\Controller\HomeController::index
+
+app_figurines:
+    path: /figurines
+    controller: App\Controller\ProductsController::figurines
+
+app_toys:
+    path: /toys
+    controller: App\Controller\ProductsController::toys
+
+app_decorations:
+    path: /decorations
+    controller: App\Controller\ProductsController::decorations
+
+app_ondemand:
+    path: /ondemand
+    controller: App\Controller\OnDemandController::index
+
+app_login:
+    path: /login
+    controller: App\Controller\SecurityController::login
+
+app_register:
+    path: /register
+    controller: App\Controller\RegistrationController::register
+
+app_cart:
+    path: /cart
+    controller: App\Controller\CartController::index
+
+app_logout:
+    path: /logout
+    controller: App\Controller\SecurityController::logout
+
+app_admin_dashboard:
+    path: /dashboard/admin
+    controller: App\Controller\AdminDashboardController::index
+
+app_dashboard:
+    path: /dashboard
+    controller: App\Controller\UserDashboardController::index

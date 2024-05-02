@@ -1,0 +1,51 @@
+    <!-- Header -->
+    <header class="header bg-purple text-white lobster-regular">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <i class="bi bi-list me-3 d-lg-none custom-icon" id="menu-toggle"></i> <!-- Icone de liste pour le menu déroulant en version mobile -->
+                <i class="bi bi-gift me-2 custom-icon"></i> <!-- Icone de cadeau -->
+                <h1 class="mb-0 me-3"><a href="{{ path('home') }}"> LamaPrints </a></h1>
+            </div>
+            <nav>
+                <div class="d-lg-flex align-items-center">
+                    <ul class="nav d-none d-lg-flex">
+                        <li class="nav-item">
+                            <a class="nav-link text-white {% if app.request.attributes.get('_route') == 'app_figurines' %}active{% endif %}" href="{{ path('app_figurines') }}">Figurines</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white {% if app.request.attributes.get('_route') == 'app_toys' %}active{% endif %}" href="{{ path('app_toys') }}">Jouets/Cadeaux</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white {% if app.request.attributes.get('_route') == 'app_decorations' %}active{% endif %}" href="{{ path('app_decorations') }}">Décorations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white {% if app.request.attributes.get('_route') == 'app_ondemand' %}active{% endif %}" href="{{ path('app_ondemand') }}">Impression à la demande</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="d-flex align-items-center">
+                <a href="{{ path('app_login') }}" class="text-white me-3 {% if app.request.attributes.get('_route') == 'app_login' %}active-icon{% endif %}"><i class="bi bi-person-fill custom-icon"></i></a> <!-- Icone de profil -->
+                <a href="{{ path('app_cart') }}" class="text-white {% if app.request.attributes.get('_route') == 'app_cart' %}active-icon{% endif %}"><i class="bi bi-basket2-fill custom-icon"></i></a> <!-- Icone de panier -->
+            </div>
+        </div>
+    </header>
+    <!-- Menu déroulant en version mobile -->
+    <div class="d-lg-none">
+        <div class="dropdown-menu" id="menu-content"> <!-- Modifiez la classe ici -->
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link text-white {% if app.request.attributes.get('_route') == 'app_figurines' %}active{% endif %}" href="{{ path('app_figurines') }}" active>Figurines</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white {% if app.request.attributes.get('_route') == 'app_toys' %}active{% endif %}" href="{{ path('app_toys') }}">Jouets/Cadeaux</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white {% if app.request.attributes.get('_route') == 'app_decorations' %}active{% endif %}" href="{{ path('app_decorations') }}">Décorations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white {% if app.request.attributes.get('_route') == 'app_ondemand' %}active{% endif %}" href="{{ path('app_ondemand') }}">Impression à la demande</a>
+                </li>
+            </ul>
+        </div>
+    </div>
